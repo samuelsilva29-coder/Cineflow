@@ -46,15 +46,20 @@ body {
     font-weight: 800;
     color: var(--texto-principal);
     text-decoration: none;
-    transition: transform 0.3s ease;
+    /* transition: transform 0.3s ease; */
 }
 
-.logo:hover {
-    transform: scale(1.08);
-}
+/* .logo:hover { */
+    /* transform: scale(1.08); */
+/* } */
 
 .logo img {
     width: 65px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.3);
 }
 
 .nav {
