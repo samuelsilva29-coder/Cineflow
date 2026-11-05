@@ -7,6 +7,10 @@
     --cor-borda: #2d0000;
     --cor-fundo: #ffffff;
     --vermelho-escuro: #7b0202;
+
+    --azul-claro: #5086c1;
+    --cor-cinza: #e9edf2;
+    --cor-suave: #cfe9ff;
 }
 
 * {
@@ -200,4 +204,146 @@ body {
     .actions {
         display: none; /* Oculta Entrar/Cadastrar no mobile */
     }
+}
+
+/* ========= HERO ============ */
+
+.material-symbols-outlined {
+    font-size: 20px;
+    line-height: 1;
+    display: inline-block;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.hero {
+    background-color: var(--azul-claro);
+    padding: 64px 0 80px;
+    background-color: 1px solid var(--cor-cinza);
+
+}
+
+/* Aqui usaremos o GRID, "irmão" do Flexbox */
+.hero-inner{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    display: grid;
+    /* "fr" = fração do espaço disponivel */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    align-items: center;
+    gap: 48px;
+}
+
+/*  Coluna da esquerda  */
+.hero-etiqueta {
+    display: inline-block;
+    background-color: var(--cor-suave);
+    color: var(--texto-principal);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.hero-titulo {
+    color: var(--texto-principal);
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 1.05;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-titulo span {
+    color: var(--vermelho);
+    display: block;
+}
+
+.hero-descricao {
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--texto-secundario);
+    max-width: 440px; /* impede que a linha fique muito comprida */
+    margin-bottom: 32px;
+}
+
+.hero-botoes {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap; /* Se não couber, o segundo botão desce p/baixo */
+    margin-bottom: 32px;
+}
+
+/* Versão maior do botão */
+.btn-grande {
+    font-size: 15px;
+    padding: 14px 28px;
+    text-transform: uppercase;
+    gap: 8px;
+}
+
+.btn-primario {
+    background-color: var(--azul);
+    color: #fff;
+}
+
+.btn-primario:hover {
+    background-color: var(--azul-escuro);
+}
+
+.btn-contorno {
+    color: var(--azul-escuro);
+    border-bottom: 1.5px solid var(--vermelho-escuro);
+    background-color: #e9edf2;
+}
+
+.btn-contorno:hover {
+    background-color: var(--cor-suave);
+}
+
+/* faixa com as 3 vantangens  */
+
+.hero-vantagens {
+    list-style: none;
+    display: flex;
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    padding: 14px 0;
+    max-width: 460px;
+}
+
+.hero-vantagens li {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 14px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--texto-secundario);
+}
+
+/* Linha divisórisa */
+/* "li + li" = todo <li> que vem DEPOIS de outro <li> (o 2º e o 3º) */
+.hero-vantagens li + li {
+    border-left: 1px solid red;
+}
+
+.hero-vantagens .material-symbols-outlined {
+    color: var(--azul-escuro);
+    font-size: 26px;
+}
+
+.hero-vantagens strong {
+    display: block;
+    color: var(--texto-principal);
+    font-weight: 600;
 }
