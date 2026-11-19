@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar | CineFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="acesso">
+        <!-- Painel azul (some no celular) -->
+        <aside class="acesso-painel">
+            <a href="index.html" class="acesso-logo">
+                <span class="material-symbols-outlined">movie</span> CineFlow
+            </a>
+            <h2>Que bom ter você de volta!</h2>
+            <p>Entre na sua conta e continue de onde parou.</p>
+            <ul class="acesso-vantagens">
+                <li><span class="material-symbols-outlined">hd</span> Filmes e séries em HD</li>
+                <li><span class="material-symbols-outlined">devices</span> Em qualquer dispositivo</li>
+                <li><span class="material-symbols-outlined">new_releases</span> Novidades toda semana</li>
+            </ul>
+        </aside>
+
+        <main class="acesso-conteudo">
+            <a href="index.html" class="acesso-voltar">
+                <span class="material-symbols-outlined">arrow_back</span> Voltar ao início
+            </a>
+
+            <div class="acesso-card">
+                <h1 style="color: #b4182d;">Entrar</h1>
+                <p class="acesso-subtitulo">Acesse sua conta CineFlow.</p>
+
+                <form class="acesso-form" id="form-login">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="seu@email.com" required>
+
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Sua senha" required>
+
+                    <div class="acesso-opcoes">
+                        <label class="checkbox">
+                            <input type="checkbox"> Lembrar de mim
+                        </label>
+                        <a href="#">Esqueci minha senha</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primario btn-grande">Entrar</button>
+                    <p class="form-aviso" id="form-aviso"></p>
+                </form>
+
+                <p class="acesso-trocar">Ainda não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

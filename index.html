@@ -7,102 +7,349 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-    
-    <!-- Link com o arquivo JavaScript externo -->
     <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- ===================== HEADER ===================== -->
     <header class="header">
         <div class="header-inner">
-            <a href="#" class="logo">
-                <img src="./assets/Gemini_Generated_Image_n6fr6kn6fr6kn6fr.jpg" alt="Logo Cineflow">
+            <a href="#inicio" class="logo">
+                <img src="./assets/Gemini_Generated_Image_n6fr6kn6fr6kn6fr.jpg" alt="Logo CineFlow">
                 <h2 style="color: #b4182d;">Cine<span style="color: #123499;">Flow</span></h2>
             </a>
 
-            <!-- Botão Menu Hambúrguer -->
+            <ul class="nav" id="nav">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#filmes">Filmes</a></li>
+                <li><a href="#series">Séries</a></li>
+                <li><a href="#categorias">Categorias</a></li>
+                <li><a href="#pesquisa">Pesquisa</a></li>
+                <li><a href="#contato">Contato</a></li>
+
+                <!-- Só aparece no celular (dentro do menu) -->
+                <li class="nav-actions">
+                    <a href="login.html" class="btn btn-entrar">Entrar</a>
+                    <a href="cadastro.html" class="btn btn-cadastrar">Cadastrar</a>
+                </li>
+            </ul>
+
+            <div class="actions">
+                <a href="login.html" class="btn btn-entrar">Entrar</a>
+                <a href="cadastro.html" class="btn btn-cadastrar">Cadastrar</a>
+            </div>
+
             <button class="hamburger" id="hamburger" aria-label="Abrir menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
-
-            <!-- Menu de Navegação -->
-            <ul class="nav" id="nav">
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Filmes</a></li>
-                <li><a href="#">Séries</a></li>
-                <li><a href="#">Categorias</a></li>
-                <li><a href="#">Pesquisa</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-
-            <div class="actions">
-                <a href="#" class="btn btn-entrar">Entrar</a>
-                <a href="#" class="btn btn-cadastrar">Cadastrar</a>
-            </div>
         </div>
-
     </header>
-    
-        <main>
 
-            <section class="hero" id="inicio">
+    <main>
+        <!-- ===================== HERO ===================== -->
+        <section class="hero" id="inicio">
+            <div class="hero-inner">
+                <div class="hero-texto">
+                    <span class="hero-etiqueta">Novidade</span>
 
-    <div class="hero-inner">
+                    <h1 class="hero-titulo">
+                        Sua próxima experiência <br> começa aqui.
+                        <span>Encontre sua próxima diversão!</span>
+                    </h1>
 
-        <div class="hero-texto">
-            <span class="hero-etiqueta">NOVIDADE</span>
+                    <p class="hero-descricao">
+                        O CineFlow é uma plataforma de filmes e séries para todos os gostos. Escolha o seu e venha se divertir!
+                    </p>
 
-            <h1 class="hero-titulo">
-                Sua próxima experiência <br> começa aqui.<br>
-                <span>Encontre sua próxima diversão!</span>
-            </h1>
+                    <div class="hero-botoes">
+                        <a href="cadastro.html" class="btn btn-primario btn-grande">
+                            <span class="material-symbols-outlined">arrow_right_alt</span>Começar agora
+                        </a>
+                        <a href="#filmes" class="btn btn-contorno btn-grande">
+                            <span class="material-symbols-outlined">play_arrow</span>
+                            Ver catálogo
+                        </a>
+                    </div>
 
-            <p class="hero-descricao">
-                O CineFlow é uma plataforma de filmes e séries para todos os gostos. Escolha o seu e venha se divertir!
-            </p>
+                    <ul class="hero-vantagens">
+                        <li>
+                            <span class="material-symbols-outlined">computer</span>
+                            <p><strong>Acesso</strong>Em qualquer dispositivo</p>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">movie</span>
+                            <p><strong>Filmes</strong>Qualidade em HD</p>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">star</span>
+                            <p><strong>Conteúdo</strong>Totalmente exclusivo</p>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">calendar_month</span>
+                            <p><strong>Séries</strong>Sempre em dia</p>
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="hero-botoes">
-                <a href="#" class="btn btn-primario btn-grande">
-                    <span class="material-symbols-outlined">arrow_right_alt</span>Começar agora
+                <div class="hero-imagem-wrapper">
+                    <img src="./assets/imagem-hero.jpeg" alt="Imagem de destaque do CineFlow" class="hero-imagem">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== FILMES ===================== -->
+        <section class="secao" id="filmes">
+            <div class="container">
+                <h2 class="secao-titulo">Filmes em destaque</h2>
+                <div class="cards">
+                    <article class="card">
+                        <span class="material-symbols-outlined card-icone">movie</span>
+                        <h3>Noite Vermelha</h3>
+                        <p>Suspense. Uma investigação que muda tudo na última cena.</p>
+                    </article>
+                    <article class="card">
+                        <span class="material-symbols-outlined card-icone">rocket_launch</span>
+                        <h3>Horizonte Zero</h3>
+                        <p>Ficção científica. A última viagem antes do fim do mundo.</p>
+                    </article>
+                    <article class="card">
+                        <span class="material-symbols-outlined card-icone">sentiment_very_satisfied</span>
+                        <h3>Domingo em Família</h3>
+                        <p>Comédia. Um almoço que sai totalmente do controle.</p>
+                    </article>
+                    <article class="card">
+                        <span class="material-symbols-outlined card-icone">favorite</span>
+                        <h3>Cartas de Março</h3>
+                        <p>Romance. Duas histórias ligadas por cartas perdidas.</p>
+                    </article>
+                    <article class="card">
+                        <span class="material-symbols-outlined card-icone">local_fire_department</span>
+                        <h3>Linha de Frente</h3>
+                        <p>Ação. Uma missão, vinte e quatro horas e nenhuma pausa.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SÉRIES ===================== -->
+        <section class="secao" id="series">
+            <div class="container">
+                <h2 class="secao-titulo">Séries para maratonar</h2>
+                <div class="cards">
+                    <article class="card">
+                        <span class="material-symbols-outlined card-icone">tv</span>
+                        <h3>Vila dos Ventos</h3>
+                        <p>Drama. 3 temporadas sobre uma cidade cheia de segredos.</p>
+                    </article>
+                    <article class="card">
+                        <span class="material-symbols-outlined card-icone">search</span>
+                        <h3>Caso Aberto</h3>
+                        <p>Policial. Um crime novo a cada episódio.</p>
+                    </article>
+                    <article class="card">
+                        <span class="material-symbols-outlined card-icone">auto_awesome</span>
+                        <h3>Reino de Cinzas</h3>
+                        <p>Fantasia. Uma guerra entre reinos e magia antiga.</p>
+                    </article>
+                    <article class="card">
+                        <span class="material-symbols-outlined card-icone">theater_comedy</span>
+                        <h3>Sala dos Fundos</h3>
+                        <p>Comédia. Episódios curtos para rir em qualquer hora.</p>
+                    </article>
+                    <article class="card">
+                        <span class="material-symbols-outlined card-icone">science</span>
+                        <h3>Laboratório 7</h3>
+                        <p>Ficção. Experimentos que fogem do controle.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== CATEGORIAS + PESQUISA ===================== -->
+        <section class="secao" id="categorias">
+            <div class="container">
+                <h2 class="secao-titulo">Categorias</h2>
+
+                <!-- A busca filtra as categorias abaixo (veja o script.js) -->
+                <div class="pesquisa" id="pesquisa">
+                    <input type="search" id="busca" placeholder="Pesquise uma categoria" aria-label="Pesquisar categoria">
+                </div>
+
+                <ul class="categorias" id="lista-categorias">
+                    <li>Ação</li>
+                    <li>Comédia</li>
+                    <li>Drama</li>
+                    <li>Terror</li>
+                    <li>Romance</li>
+                    <li>Ficção científica</li>
+                    <li>Animação</li>
+                    <li>Documentário</li>
+                    <li>Suspense</li>
+                    <li>Fantasia</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===================== COMO FUNCIONA ===================== -->
+        <section class="secao" id="como-funciona">
+            <div class="container">
+                <h2 class="secao-titulo">Como funciona</h2>
+                <div class="passos">
+                    <div class="passo">
+                        <div class="passo-circulo">
+                            <span class="passo-numero">1</span>
+                            <span class="material-symbols-outlined">person_add</span>
+                        </div>
+                        <h3>Crie sua conta</h3>
+                        <p>Cadastre-se em poucos segundos.</p>
+                    </div>
+
+                    <span class="seta" aria-hidden="true">→</span>
+
+                    <div class="passo">
+                        <div class="passo-circulo">
+                            <span class="passo-numero">2</span>
+                            <span class="material-symbols-outlined">search</span>
+                        </div>
+                        <h3>Escolha o que assistir</h3>
+                        <p>Pesquise por filme, série ou categoria.</p>
+                    </div>
+
+                    <span class="seta" aria-hidden="true">→</span>
+
+                    <div class="passo">
+                        <div class="passo-circulo">
+                            <span class="passo-numero">3</span>
+                            <span class="material-symbols-outlined">play_circle</span>
+                        </div>
+                        <h3>Aperte o play</h3>
+                        <p>Assista em HD no celular, tablet ou computador.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== BENEFÍCIOS + CTA ===================== -->
+        <section class="secao" id="beneficios">
+            <div class="container">
+                <h2 class="secao-titulo">Por que o CineFlow?</h2>
+
+                <ul class="beneficios">
+                    <li>
+                        <div class="beneficio-circulo"><span class="material-symbols-outlined">hd</span></div>
+                        <h3>Qualidade em HD</h3>
+                        <p>Imagem e som incríveis em cada cena.</p>
+                    </li>
+                    <li>
+                        <div class="beneficio-circulo"><span class="material-symbols-outlined">devices</span></div>
+                        <h3>Em qualquer lugar</h3>
+                        <p>Comece em um aparelho e continue em outro.</p>
+                    </li>
+                    <li>
+                        <div class="beneficio-circulo"><span class="material-symbols-outlined">new_releases</span></div>
+                        <h3>Sempre novidades</h3>
+                        <p>Lançamentos e episódios novos toda semana.</p>
+                    </li>
+                    <li>
+                        <div class="beneficio-circulo"><span class="material-symbols-outlined">verified_user</span></div>
+                        <h3>Segurança</h3>
+                        <p>Seus dados protegidos com tecnologia de ponta.</p>
+                    </li>
+                </ul>
+
+                <div class="cta">
+                    <div class="cta-icone"><span class="material-symbols-outlined">movie</span></div>
+                    <div class="cta-texto">
+                        <h2>Sua sessão começa agora</h2>
+                        <p>Crie sua conta gratuitamente e experimente o CineFlow.</p>
+                    </div>
+                    <a href="cadastro.html" class="btn btn-primario btn-grande">Criar conta gratuita</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== CONTATO ===================== -->
+        <section class="secao" id="contato">
+            <div class="container">
+                <h2 class="secao-titulo">Contato</h2>
+                <div class="contato-conteudo">
+                    <div class="contato-info">
+                        <h3>Fale com a gente</h3>
+                        <p>Tem uma dúvida, sugestão de filme ou série? Envie uma mensagem!</p>
+                        <ul class="contato-lista">
+                            <li><span class="material-symbols-outlined">mail</span> contato@cineflow.com.br</li>
+                            <li><span class="material-symbols-outlined">call</span> (11) 99999-9999</li>
+                            <li><span class="material-symbols-outlined">schedule</span> Segunda a sexta, das 8h às 17h</li>
+                        </ul>
+                    </div>
+
+                    <form class="contato-form" id="form-contato">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" placeholder="Seu nome" required>
+
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="seu@email.com" required>
+
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" rows="5" placeholder="Escreva sua mensagem" required></textarea>
+
+                        <button type="submit" class="btn btn-primario btn-grande">Enviar mensagem</button>
+                        <p class="form-aviso" id="form-aviso"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="container footer-colunas">
+            <div class="footer-sobre">
+                <a href="#inicio" class="footer-logo">
+                    <img src="./assets/Gemini_Generated_Image_n6fr6kn6fr6kn6fr.jpg" alt="Logo CineFlow">
+                    <span>CINEFLOW</span>
                 </a>
-                <a href="#" class="btn btn-contorno btn-grande">
-                    <span class="material-symbols-outlined">play_arrow</span>
-                    Ver recursos
-                </a>
+                <p>Plataforma de filmes e séries para todos os gostos.</p>
             </div>
 
-            <!-- vantagens -->
-            <ul class="hero-vantagens">
-                <li>
-                    <span class="material-symbols-outlined">computer</span>
-                    <p><strong>Acesso</strong>Em qualquer dispositivo</p>
-                </li>
-                <li>
-                    <span class="material-symbols-outlined">movie</span>
-                    <p><strong>Filmes</strong>Qualidade em HD</p>
-                </li>
-                <li>
-                    <span class="material-symbols-outlined">star</span>
-                    <p><strong>Conteúdo</strong>Totalmente exclusivo</p>
-                </li>
-                <li>
-                    <span class="material-symbols-outlined">calendar_month</span>
-                    <p><strong>Séries</strong>Sempre em dia</p>
-                </li>
-            </ul>
+            <div>
+                <h3>Navegação</h3>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#filmes">Filmes</a></li>
+                    <li><a href="#series">Séries</a></li>
+                    <li><a href="#categorias">Categorias</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Suporte</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#contato">Fale Conosco</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                </ul>
+            </div>
+
+            <address class="footer-contato">
+                <h3>Contato</h3>
+                <a href="mailto:contato@cineflow.com.br">
+                    <span class="material-symbols-outlined">mail</span>
+                    contato@cineflow.com.br
+                </a>
+                <a href="tel:+5511999999999">
+                    <span class="material-symbols-outlined">call</span>
+                    (11) 99999-9999
+                </a>
+            </address>
         </div>
 
-        <div class="hero-imagem-wrapper">
-            <img
-                src="./assets/imagem-hero.jpeg"
-                alt="imagem-hero"
-                class="hero-imagem">
+        <div class="footer-copyright">
+            <p>© <span id="ano"></span> CineFlow. Todos os direitos reservados.</p>
         </div>
-
-    </div>
-</section>
-
-        </main>
+    </footer>
 </body>
 </html>

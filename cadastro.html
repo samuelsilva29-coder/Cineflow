@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar | CineFlow</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="acesso">
+        <aside class="acesso-painel">
+            <a href="index.html" class="acesso-logo">
+                <span class="material-symbols-outlined">movie</span> CineFlow
+            </a>
+            <h2>Sua próxima diversão começa aqui</h2>
+            <p>Crie sua conta gratuita e descubra filmes e séries para todos os gostos.</p>
+            <ul class="acesso-vantagens">
+                <li><span class="material-symbols-outlined">star</span> Conteúdo exclusivo</li>
+                <li><span class="material-symbols-outlined">calendar_month</span> Séries sempre em dia</li>
+                <li><span class="material-symbols-outlined">verified_user</span> Seus dados protegidos</li>
+            </ul>
+        </aside>
+
+        <main class="acesso-conteudo">
+            <a href="index.html" class="acesso-voltar">
+                <span class="material-symbols-outlined">arrow_back</span> Voltar ao início
+            </a>
+
+            <div class="acesso-card">
+                <h1 style="color: #b4182d;">Criar conta</h1>
+                <p class="acesso-subtitulo">Leva menos de um minuto.</p>
+
+                <form class="acesso-form" id="form-cadastro">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" placeholder="Seu nome" required>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="seu@email.com" required>
+
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Mínimo de 6 caracteres" minlength="6" required>
+
+                    <label for="confirmar">Confirmar senha</label>
+                    <input type="password" id="confirmar" placeholder="Repita a senha" required>
+
+                    <label class="checkbox">
+                        <input type="checkbox" required>
+                        Aceito os <a href="#">Termos de Uso</a>
+                    </label>
+
+                    <button type="submit" class="btn btn-primario btn-grande">Criar conta</button>
+                    <p class="form-aviso" id="form-aviso"></p>
+                </form>
+
+                <p class="acesso-trocar">Já tem conta? <a href="login.html">Entrar</a></p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
